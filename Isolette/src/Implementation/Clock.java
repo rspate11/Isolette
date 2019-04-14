@@ -51,11 +51,6 @@ public class Clock {
 	}
 	
 	
-//	public boolean getevent() {
-//		return eventsecond;
-//	}
-	
-	
 	public void setevent(Boolean on) {
 		this.eventsecond = on;
 		

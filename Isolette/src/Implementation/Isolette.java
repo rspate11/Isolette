@@ -60,6 +60,7 @@ public class Isolette {
 				@SuppressWarnings("resource")
 				Scanner sc1 = new Scanner(inFile);
 				float value = sc1.nextFloat();
+				ts.setroomtemp(value);
 				air.settemp(value);
 				t.setcurrTemp(value);
 				//t.setStatuses(nurse);

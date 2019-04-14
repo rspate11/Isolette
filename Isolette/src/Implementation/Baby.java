@@ -30,8 +30,8 @@ public class Baby extends User {
 	public double bGradient(Boolean r) {
 
 		boolean b = getbStatus();
-		System.out.println(r);
-		System.out.println(bStatus);
+		//System.out.println(r);
+		//System.out.println(bStatus);
 		if(r) {
 			bgradient = + 1;
 		}
@@ -44,10 +44,10 @@ public class Baby extends User {
 	public void setbStatus(Boolean b) {
 		this.bStatus = b;
 		if (bStatus) {
-			System.out.println(" baby status set to true");
+			System.out.println(" Baby is put inside");
 		}
 		else {
-			System.out.println(" baby status set to false");}
+			System.out.println(" Baby is removed ");}
 	}
 	
 }

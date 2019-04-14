@@ -92,7 +92,7 @@ public class Thermostat {
 	 */
 
 	public void setStatuses( Nurse n ) {
-		System.out.println(currTemp);
+		//System.out.println(currTemp);
 		//System.out.println(mode);	
 		
 		if(mode)

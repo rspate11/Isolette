@@ -22,16 +22,16 @@ public class HeatSource {
 	public double incrTemp(Boolean r) {
 
 		boolean h = getheatStatus();
-		System.out.println(r);
-		System.out.println(h);
+		//System.out.println(r);
+		//System.out.println(h);
 		if (r) {
 			heatgradient = +3;
-			System.out.println(" increment temperature in thermostat via heatsource");
+			//System.out.println(" increment temperature in thermostat via heatsource");
 		
 		}
 		else {
 			heatgradient = -2;
-			System.out.println(" decrement temperature in thermostat as heatsource is off");
+			//System.out.println(" decrement temperature in thermostat as heatsource is off");
 		}
 		return heatgradient;
 	}
@@ -46,7 +46,8 @@ public class HeatSource {
 	public void setheatStatus(Boolean h) {
 		this.heatStatus = h;
 		if (heatStatus) {
-		System.out.println(" heat status set on");}
+		System.out.println(" Heat Source is turned ON");}
+		else {System.out.println(" Heat Source is turned OFF");}
 		
 	}
 

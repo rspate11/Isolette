@@ -34,7 +34,7 @@ public class TempSensor {
 			boolean r = t.babyStatus;
 			boolean s = t.heatStatus;
 			
-			currTemp = air.gettemp(h1.incrTemp(s),b1.bGradient(r));
+			currTemp = air.gettemp(currTemp,h1.incrTemp(s),b1.bGradient(r));
 			//System.out.println("hiii" + currTemp);
 			d.setCurrentTemp(currTemp);
 			t.setcurrTemp(currTemp);
@@ -49,6 +49,8 @@ public class TempSensor {
 		return tempSensorStatus;
 	
 	}
+	
+	
 	/**
 	 * retrieves event second from Clock
 	 */
@@ -57,6 +59,12 @@ public class TempSensor {
 		getcurrTemp(b,h,t);
 		
 	
+	}
+
+
+	public void setroomtemp(float value) {
+		this.currTemp = value;
+		
 	}
 	
 	
