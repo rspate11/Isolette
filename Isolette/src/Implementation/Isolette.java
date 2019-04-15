@@ -63,6 +63,7 @@ public class Isolette {
 				ts.setroomtemp(value);
 				air.settemp(value);
 				t.setcurrTemp(value);
+				System.out.println("Current Temperature is " + value);
 				//t.setStatuses(nurse);
 				Clock c = new Clock(onevent,ts,t,nurse,baby, h);
 				

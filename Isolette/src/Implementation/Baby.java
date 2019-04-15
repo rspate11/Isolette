@@ -44,10 +44,11 @@ public class Baby extends User {
 	public void setbStatus(Boolean b) {
 		this.bStatus = b;
 		if (bStatus) {
-			System.out.println(" Baby is put inside");
+			//System.out.println(" Baby is put inside");
 		}
 		else {
-			System.out.println(" Baby is removed ");}
+			//System.out.println(" Baby is removed ");
+			}
 	}
 	
 }

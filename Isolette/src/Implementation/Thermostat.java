@@ -68,12 +68,23 @@ public class Thermostat {
 		{
 			mode = false;
 			alarmStatus = true;
-			babyStatus = false;
 			a.displayAlarm();
-//			System.out.println(" ALARM ");
+			if (babyStatus) {
+				Baby b = new Baby(false);
+				babyStatus = false;
+				b.setbStatus(false);
+				System.out.println(" Baby is removed ");
+				
+			}
+			else {
+				Baby b = new Baby(false);
+				babyStatus = false;
+				b.setbStatus(false);
+				System.out.println(" Mode not safe for the Baby ");
+				
+			}
 			d.setmode(mode);
-			Baby b = new Baby(false);
-			b.setbStatus(false);
+
 		}
 		else 
 		{
@@ -92,15 +103,29 @@ public class Thermostat {
 	 */
 
 	public void setStatuses( Nurse n ) {
-		//System.out.println(currTemp);
+
+		System.out.println("Current Temperature is " + currTemp);
 		//System.out.println(mode);	
 		
 		if(mode)
 		{
 			if(currTemp >= n.getDmin() && currTemp <= n.getDmax()) {
-				Baby b = new Baby(true);
-				babyStatus = true;
-				b.setbStatus(true);
+				
+				if (!babyStatus) {
+					Baby b = new Baby(true);
+					babyStatus = true;
+					b.setbStatus(true);
+					System.out.println(" Baby is put inside ");
+				}
+				else {
+					Baby b = new Baby(true);
+					babyStatus = true;
+					b.setbStatus(true);
+					System.out.println(" Baby is still inside ");
+				}
+//				Baby b = new Baby(true);
+//				babyStatus = true;
+//				b.setbStatus(true);
 			} 
 			if(currTemp < n.getDmin())
 			{
@@ -120,9 +145,23 @@ public class Thermostat {
 				alarmStatus = true;
 //				System.out.println(" ALARM  2");
 				a.displayAlarm();
-				Baby b = new Baby(false);
-				babyStatus = false;
-				b.setbStatus(false);
+				if (babyStatus) {
+					Baby b = new Baby(false);
+					babyStatus = false;
+					b.setbStatus(false);
+					System.out.println(" Baby is removed ");
+					
+				}
+				else {
+					Baby b = new Baby(false);
+					babyStatus = false;
+					b.setbStatus(false);
+					System.out.println(" Temperature still not safe for the Baby ");
+					
+				}
+//				Baby b = new Baby(false);
+//				babyStatus = false;
+//				b.setbStatus(false);
 				
 			}
 			if((currTemp <= n.getAmax()) && (currTemp >= n.getAmin()))

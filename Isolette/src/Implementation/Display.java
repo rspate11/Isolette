@@ -130,7 +130,7 @@ public class Display {
 
 	public void setCurrentTemp(float currTemp) {
 		this.currentTemp = currTemp;
-		System.out.println("Current Temperature is " + currentTemp);
+		//System.out.println("Current Temperature is " + currentTemp);
 		
 		
 	}
