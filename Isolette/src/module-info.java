@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Riddhi
- *
- */
-module Isolette {
-}
